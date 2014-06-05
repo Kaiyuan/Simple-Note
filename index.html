@@ -4,7 +4,9 @@
 	<meta charset="UTF-8">
 	<title>Note</title>
 	<link rel="stylesheet" href="style.css">
-	<!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script> -->
+	<link rel="shortcut icon" href="icons/favicon.ico" >
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+	<script type="text/javascript" src="script.js"></script>
 </head>
 <body class="center relative">
 <header class="left center"><h1>Note Demo</h1></header>
@@ -15,74 +17,137 @@
 		<div id="Note" class="absolute">
 			<div id="Note-icon" class="box100"></div>
 			<div id="Note-Window-box" class="absolute">
-				<div id="Note-Window" class="box100 relative">
-					<div id="Note-Main" class="left100">
-						<div class="Note-Slite-box">
-							<div class="Note-Top left100">
-								<div id="Note-Menu-icon" class="Note-top-icon left"></div>
-								<div id="Note-Search-Box" class="left">
-									<div id="Note-Search-input"><input type="search"></div>
-									
+				<div id="Note-Window" class="box100">
+					<div id="Note-Main" class="left100 relative">
+						<div id="Note-Slites" class="absolute tr3">
+							<div class="Note-Slite-box left">
+								<div class="Note-Top left100">
+									<div id="Note-Menu-icon" class="Note-top-icon left"></div>
+									<div id="Note-Search-Box" class="left">
+										<div id="Note-Search-input"><input type="search"></div>
+										
+									</div>
+									<div id="Note-Add-icon" class="Note-top-icon right"></div>
 								</div>
-								<div id="Note-Add-icon" class="Note-top-icon right"></div>
+								<div class="Note-List-Slite relative">
+									<div class="Note-list-slite-box absolute tr3">
+										<ul id="Time-List" class="Note-list list-left left fs12">
+											<li>
+												<div class="Note-time-list-post left">2014-05-23</div>
+												<div class="Note-list-time-NO right"><span>1</span></div>
+											</li>
+											<li>
+												<div class="Note-time-list-post left">2014-05-17</div>
+												<div class="Note-list-time-NO right"><span>1</span></div>
+											</li>
+											<li>
+												<div class="Note-time-list-post left">2014-05-16</div>
+												<div class="Note-list-time-NO right"><span>10</span></div>
+											</li>
+											<li>
+												<div class="Note-time-list-post left">2014-05-10</div>
+												<div class="Note-list-time-NO right"><span>1</span></div>
+											</li>
+											<li>
+												<div class="Note-time-list-post left">2014-05-05</div>
+												<div class="Note-list-time-NO right"><span>3</span></div>
+											</li>
+										</ul>
+										<ul id="List" class="Note-list list-left left fs12">
+											<li>
+												<div class="Note-list-star Note-icon left"></div>
+												<div class="Note-list-post left">轻量级的小笔记是一个相当方便好用的小工具！</div>
+												<div class="Note-list-time relative right">
+													<ul class="list center absolute left100 tr3">
+														<li class="seve-time left100">
+															<span class="time">12/05</span>
+														</li>
+														<li class="Note-list-Edit Note-icon left100"></li>
+													</ul>
+												</div>
+											</li>
+											<li>
+												<div class="Note-list-star Note-list-star-select Note-icon left"></div>
+												<div class="Note-list-post left">Python是一个高层次的结合了解释性、编译性、互动性和面向对象的脚本语言。 Python的设计具有很强的可读性，相比其他语言经常使用英文关键字，其他语言的一些标点符号，它具有比其他语言更有特色语法结构。</div>
+												<div class="Note-list-time relative right">
+													<ul class="list center absolute left100 tr3">
+														<li class="seve-time left100">
+															<span class="time">10/05</span>
+														</li>
+														<li class="Note-list-Edit Note-icon left100"></li>
+													</ul>
+												</div>
+											</li>
+											<li>
+												<div class="Note-list-star Note-icon left"></div>
+												<div class="Note-list-post left">GitHub is the best place to share code with friends, co-workers, classmates, and complete strangers. Over six million people use GitHub to build amazing things together.</div>
+												<div class="Note-list-time relative right">
+													<ul class="list center absolute left100 tr3">
+														<li class="seve-time left100">
+															<span class="time">09/05</span>
+														</li>
+														<li class="Note-list-Edit Note-icon left100"></li>
+													</ul>
+												</div>
+											</li>
+											<li>
+												<div class="Note-list-star Note-icon left"></div>
+												<div class="Note-list-post left">轻量级的小笔记是一个相当方便好用的小工具！</div>
+												<div class="Note-list-time relative right">
+													<ul class="list center absolute left100 tr3">
+														<li class="seve-time left100">
+															<span class="time">08/05</span>
+														</li>
+														<li class="Note-list-Edit Note-icon left100"></li>
+													</ul>
+												</div>
+											</li>
+										</ul>
+										<ul id="Star-List" class="Note-list list-left left fs12">
+											<li>
+												<div class="Note-list-star Note-list-star-select Note-icon left"></div>
+												<div class="Note-list-post left">Python是一个高层次的结合了解释性、编译性、互动性和面向对象的脚本语言。 Python的设计具有很强的可读性，相比其他语言经常使用英文关键字，其他语言的一些标点符号，它具有比其他语言更有特色语法结构。</div>
+												<div class="Note-list-time relative right">
+													<ul class="list center absolute left100 tr3">
+														<li class="seve-time left100">
+															<span class="time">10/05</span>
+														</li>
+														<li class="Note-list-Edit Note-icon left100"></li>
+													</ul>
+												</div>
+											</li>
+										</ul>
+										<ul id="tags" class="Note-list list-left left fs12">
+											<div>jQuery</div>
+											<div>HTML</div>
+											<div>key</div>
+											<div>json</div>
+											<div>test</div>
+											<div>PHP</div>
+											<div>Python</div>
+											<div>CSS</div>
+										</ul>
+									</div>
+								</div>
 							</div>
-							<ul class="Note-list list-left left fs12">
-								<li>
-									<div class="Note-list-star Note-icon left"></div>
-									<div class="Note-list-post left">轻量级的小笔记是一个相当方便好用的小工具！</div>
-									<div class="Note-list-time relative right">
-										<ul class="list center absolute left100 tr3">
-											<li class="seve-time left100">
-												<span class="time">12/05</span>
-											</li>
-											<li class="Note-list-Edit Note-icon left100"></li>
-										</ul>
-									</div>
-								</li>
-								<li>
-									<div class="Note-list-star Note-list-star-select Note-icon left"></div>
-									<div class="Note-list-post left">Python是一个高层次的结合了解释性、编译性、互动性和面向对象的脚本语言。 Python的设计具有很强的可读性，相比其他语言经常使用英文关键字，其他语言的一些标点符号，它具有比其他语言更有特色语法结构。</div>
-									<div class="Note-list-time relative right">
-										<ul class="list center absolute left100 tr3">
-											<li class="seve-time left100">
-												<span class="time">10/05</span>
-											</li>
-											<li class="Note-list-Edit Note-icon left100"></li>
-										</ul>
-									</div>
-								</li>
-								<li>
-									<div class="Note-list-star Note-icon left"></div>
-									<div class="Note-list-post left">GitHub is the best place to share code with friends, co-workers, classmates, and complete strangers. Over six million people use GitHub to build amazing things together.</div>
-									<div class="Note-list-time relative right">
-										<ul class="list center absolute left100 tr3">
-											<li class="seve-time left100">
-												<span class="time">09/05</span>
-											</li>
-											<li class="Note-list-Edit Note-icon left100"></li>
-										</ul>
-									</div>
-								</li>
-								<li>
-									<div class="Note-list-star Note-icon left"></div>
-									<div class="Note-list-post left">轻量级的小笔记是一个相当方便好用的小工具！</div>
-									<div class="Note-list-time relative right">
-										<ul class="list center absolute left100 tr3">
-											<li class="seve-time left100">
-												<span class="time">08/05</span>
-											</li>
-											<li class="Note-list-Edit Note-icon left100"></li>
-										</ul>
-									</div>
-								</li>
-							</ul>
+							<div class="Note-Slite-box left">
+								<div class="Note-Top left100">
+									<div id="Note-back-icon" class="Note-top-icon left"></div>
+									<div id="Note-Save-icon" class="right"><span class="fs12 tr3">保存</span></div>
+								</div>
+								<div id="Note-add-box" class="left100">
+									<textarea name="NoteAddText" id="NoteAddText" cols="30" rows="10"></textarea>
+									<input type="text" name="NoteTagsInput">
+								</div>
+							</div>
 						</div>
 					</div>
 					<div id="Note-Status" class="left100 center absolute fs12">
 						<span id="Anchor-icon" class="Note-Bottom-icon left"></span>
-						<span id="Note-list-time-icon" class="Note-Bottom-icon inline-block">&nbsp;</span>
-						<span id="Note-list-icon" class="Note-Bottom-icon inline-block">&nbsp;</span>
-						<span id="Note-list-star-icon" class="Note-Bottom-icon inline-block">&nbsp;</span>
+						<span id="Note-list-time-icon" class="Note-Bottom-icon inline-block"></span>
+						<span id="Note-list-icon" class="Note-Bottom-icon inline-block op1"></span>
+						<span id="Note-list-star-icon" class="Note-Bottom-icon inline-block"></span>
+						<span id="Note-list-tag-icon" class="Note-Bottom-icon inline-block"></span>
 						<span id="Note-Settings-icon" class="Note-Bottom-icon right"></span>
 					</div>
 				</div>
@@ -90,7 +155,15 @@
 		</div>
 	</div>
 	<footer>
-		<p class="center">Designer <a href="boxks.com">Kaiyuan</a></p>
+		<p class="center">
+			Designer <a href="boxks.com">Kaiyuan</a>
+		</p>
+		<form id="ali-form" action="https://shenghuo.alipay.com/send/payment/fill.htm" method="post">
+		<input name="optEmail" type="hidden" value="sealour@gmail.com" />
+		<!-- <input name="payAmount" type="hidden" value="" placeholder="付款金额" /> --> 
+		<input name="title" type="hidden" value="Simple Note" placeholder="付款说明" />
+		<input name="alpay" type="submit" value="Alipay" />
+		</form>
 	</footer>
 </body>
 </html>

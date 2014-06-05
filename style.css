@@ -153,6 +153,21 @@ menu, nav,form {
 body .op0 {
 	opacity: 0 !important;
 }
+body .op02 {
+	opacity: 0.2 !important;
+}
+body .op03 {
+	opacity: 0.3 !important;
+}
+body .op05 {
+	opacity: 0.5 !important;
+}
+body .op06 {
+	opacity: 0.6 !important;
+}
+body .op08 {
+	opacity: 0.8 !important;
+}
 body .op1 {
 	opacity: 1 !important;
 }
@@ -250,20 +265,6 @@ header {
 	-webkit-background-size: cover;
 	background-size: cover;
 }
-/*#Note-Box::before, #Note-Box::after {
-	content: "";
-	height: 100%;
-	width: 80px;
-	top: 0;
-}
-#Note-Box::before {
-	left: 0;
-	background-image: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
-}
-#Note-Box::after {
-	right: 0;
-	background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
-}*/
 #Finder-bar {
 	height: 20px;
 	background-color: rgba(205, 210, 223, 0.7);
@@ -296,6 +297,7 @@ header {
 	transform: translate(-50%, 0);
 	width: 380px;
 	height: 480px;
+	border-radius: 6px;
 }
 #Note-Window-box::before {
 	content: "";
@@ -317,7 +319,13 @@ header {
 	background: #fff;
 	box-shadow: 0 7px 14px rgba(0,0,0,0.7);
 }
-.Note-Slite-box {
+#Note-Slites{
+	width: 200%;
+	top: 0;
+	left: 0;
+	height: 459px;
+}
+.Note-Slite-box, #Note-Main {
 	width: 380px;
 	height: 459px;
 	overflow: hidden;
@@ -341,6 +349,21 @@ header {
 #Note-Add-icon {
 	background-image: url(icons/plus.svg);
 	background-size: 18px;
+}
+#Note-back-icon {
+	background-image: url(icons/arrow_left.svg);
+}
+#Note-Save-icon {
+	padding: 0 5px;
+	cursor: pointer;
+}
+#Note-Save-icon>span {
+	padding: 5px 10px;
+	border-radius: 1em;
+	background-color: #dcdddd;
+}
+#Note-Save-icon>span:hover {
+	background-color: #dadbdb;
 }
 #Note-Search-Box {
 	width: 300px;
@@ -367,11 +390,23 @@ header {
 }
 /*Top bar end*/
 /*list*/
-.Note-list {
-	width: 100%;
+.Note-list, .Note-List-Slite {
+	width: 380px;
 	height: 418px;
 	overflow: auto;
 	overflow-x: hidden;
+}
+.Note-List-Slite {
+	overflow: hidden;
+}
+.Note-list-slite-box {
+	height: 418px;
+	width: 1520px;
+	top: 0;
+	left: -380px;
+}
+.Note-list {
+	width: 380px;
 }
 .Note-list>li {
 	border-bottom: 1px solid #eee;
@@ -425,14 +460,52 @@ body .Note-list li>.Note-list-star-select, body .Note-list li>.Note-list-star-se
 	background-image: url(icons/compose-4.svg);
 	opacity: 0.5;
 }
+/*time list*/
+.Note-time-list-post {
+	padding-left: 15px;
+}
+.Note-list-time-NO {
+	padding-right: 15px;
+}
+.Note-list-time-NO>span {
+	padding: 3px 7px;
+	background-color: #dcdddd;
+	border-radius: 1em;
+}
+#tags>div {
+	background: #dcdddd;
+	border-radius: 1em;
+	padding: 0 10px;
+	margin: 10px 3px 0 6px;
+	float: left;
+	line-height: 1.5em;
+	cursor: pointer;
+}
 /*list end*/
+#Note-add-box {
+	height: 418px;
+	width: 380px;
+}
+#Note-add-box>textarea {
+	width: 370px;
+	padding: 5px;
+	border-width: 0;
+	height: 368px;
+}
+#Note-add-box>input {
+	width: 370px;
+	padding: 5px;
+	margin: 0;
+	border-radius: 50px;
+}
+/*Add Box end*/
 #Note-Status {
 	height: 20px;
 	line-height: 20px;
 	border-top: 1px solid #ddd;
 	left: 0;
 	bottom: 0;
-	background: #fff;
+	/*background: #fff;*/
 }
 .Note-Bottom-icon {
 	width: 12px;
@@ -444,7 +517,7 @@ body .Note-list li>.Note-list-star-select, body .Note-list li>.Note-list-star-se
 	display: inline-block;
 }
 .Note-Bottom-icon:hover, .Note-top-icon:hover {
-	opacity: .8;
+	opacity: .7;
 }
 #Anchor-icon {
 	background-image: url(icons/anchor.svg);
@@ -460,4 +533,7 @@ body .Note-list li>.Note-list-star-select, body .Note-list li>.Note-list-star-se
 }
 #Note-list-star-icon {
 	background-image: url(icons/star.svg);
+}
+#Note-list-tag-icon {
+	background-image: url(icons/tag.svg);
 }
